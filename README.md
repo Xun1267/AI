@@ -1,86 +1,166 @@
-# AI心理咨询网站
+# 🧠 AI心理咨询聊天平台
 
-基于CBT理论的AI心理咨询平台，为用户提供专业的心理健康支持。
+一个基于React和Node.js的全栈AI心理咨询应用，提供温馨、专业的心理健康支持服务。
 
-## 技术架构
+## ✨ 功能特性
 
-### 前端 (Frontend)
-- **框架**: React.js + TypeScript
-- **UI库**: Ant Design
-- **状态管理**: Redux Toolkit
-- **样式**: Tailwind CSS
-- **构建工具**: Vite
+- 🎨 **现代化UI设计** - 采用毛玻璃效果和温暖色调的精美界面
+- 💬 **实时聊天** - 流畅的AI对话体验
+- 📱 **响应式设计** - 完美适配桌面端和移动端
+- 🔒 **隐私保护** - 安全的数据处理和存储
+- ⚡ **高性能** - 基于Vite和现代前端技术栈
 
-### 后端 (Backend)
-- **运行环境**: Node.js
-- **框架**: Express.js
-- **数据库**: MongoDB
-- **身份验证**: JWT
-- **AI服务**: OpenAI API
+## 🛠️ 技术栈
 
-## 项目结构
+### 前端
+- **React 18** - 现代化的用户界面框架
+- **TypeScript** - 类型安全的JavaScript
+- **Redux Toolkit** - 状态管理
+- **Tailwind CSS** - 实用优先的CSS框架
+- **Vite** - 快速的构建工具
+- **Ant Design** - 企业级UI组件库
+- **Lucide React** - 精美的图标库
+
+### 后端
+- **Node.js** - JavaScript运行时
+- **Express** - Web应用框架
+- **TypeScript** - 类型安全的服务端开发
+- **Winston** - 日志管理
+
+## 🚀 快速开始
+
+### 环境要求
+- Node.js >= 16.0.0
+- npm >= 8.0.0
+
+### 安装步骤
+
+1. **克隆项目**
+   ```bash
+   git clone https://github.com/your-username/ai-psychology-chat.git
+   cd ai-psychology-chat
+   ```
+
+2. **安装依赖**
+   ```bash
+   # 安装后端依赖
+   cd backend
+   npm install
+   
+   # 安装前端依赖
+   cd ../frontend
+   npm install
+   ```
+
+3. **环境配置**
+   ```bash
+   # 复制环境变量文件
+   cp backend/.env.example backend/.env
+   cp frontend/.env.example frontend/.env
+   ```
+
+4. **启动开发服务器**
+   
+   **方式一：使用启动脚本（推荐）**
+   ```bash
+   # Windows
+   ./start-dev.bat
+   
+   # Linux/macOS
+   ./start-dev.sh
+   ```
+   
+   **方式二：手动启动**
+   ```bash
+   # 启动后端服务器（端口3000）
+   cd backend
+   npm run dev
+   
+   # 启动前端服务器（端口5173）
+   cd frontend
+   npm run dev
+   ```
+
+5. **访问应用**
+   - 前端应用：http://localhost:5173
+   - 后端API：http://localhost:3000
+
+## 📁 项目结构
 
 ```
-ai-psychology-counseling/
-├── frontend/                 # 前端应用
+ai-psychology-chat/
+├── backend/                 # 后端服务
 │   ├── src/
-│   │   ├── components/      # 可复用组件
-│   │   ├── pages/          # 页面组件
-│   │   ├── store/          # 状态管理
-│   │   ├── services/       # API服务
-│   │   ├── utils/          # 工具函数
-│   │   └── types/          # TypeScript类型定义
-│   ├── public/
-│   └── package.json
-├── backend/                 # 后端API
-│   ├── src/
-│   │   ├── controllers/    # 控制器
+│   │   ├── config/         # 配置文件
+│   │   ├── middleware/     # 中间件
 │   │   ├── models/         # 数据模型
 │   │   ├── routes/         # 路由定义
-│   │   ├── middleware/     # 中间件
 │   │   ├── services/       # 业务逻辑
 │   │   └── utils/          # 工具函数
+│   ├── .env.example        # 环境变量示例
 │   └── package.json
-└── docs/                   # 项目文档
+├── frontend/               # 前端应用
+│   ├── src/
+│   │   ├── components/     # React组件
+│   │   ├── pages/          # 页面组件
+│   │   ├── services/       # API服务
+│   │   ├── store/          # Redux状态管理
+│   │   └── App.tsx         # 主应用组件
+│   ├── public/             # 静态资源
+│   └── package.json
+├── start-dev.bat           # Windows启动脚本
+├── start-dev.sh            # Linux/macOS启动脚本
+└── README.md
 ```
 
-## 核心功能
+## 🎯 主要页面
 
-### 1. 用户管理
-- 用户注册/登录
-- 个人资料管理
-- 隐私设置
+- **首页** - 简洁优雅的欢迎页面，一键开始咨询
+- **聊天页面** - 核心功能页面，提供AI心理咨询服务
+- **用户认证** - 登录和注册功能
+- **个人资料** - 用户信息管理
+- **对话历史** - 查看历史聊天记录
 
-### 2. AI对话系统
-- 实时对话界面
-- CBT理论指导
-- 情绪识别与分析
-- 个性化建议
+## 🎨 设计特色
 
-### 3. 数据管理
-- 对话历史记录
-- 情绪变化追踪
-- 进度评估报告
+- **毛玻璃效果** - 现代化的视觉设计
+- **温暖色调** - 营造舒适的咨询环境
+- **流畅动画** - 提升用户体验
+- **响应式布局** - 适配各种设备尺寸
 
-### 4. 安全与隐私
-- 数据加密存储
-- 用户隐私保护
-- 安全的API通信
+## 🔧 开发说明
 
-## 开发计划
+### 可用脚本
 
-1. **第一阶段**: 基础架构搭建
-2. **第二阶段**: 用户系统开发
-3. **第三阶段**: AI对话功能实现
-4. **第四阶段**: CBT理论集成
-5. **第五阶段**: 测试与优化
+**后端**
+- `npm run dev` - 启动开发服务器
+- `npm run build` - 构建生产版本
+- `npm start` - 启动生产服务器
 
-## 环境要求
+**前端**
+- `npm run dev` - 启动开发服务器
+- `npm run build` - 构建生产版本
+- `npm run preview` - 预览生产版本
 
-- Node.js >= 16.0.0
-- MongoDB >= 4.4
-- 现代浏览器支持
+### 代码规范
+- 使用TypeScript进行类型检查
+- 遵循ESLint代码规范
+- 使用Prettier进行代码格式化
 
-## 快速开始
+## 📝 许可证
 
-详细的安装和运行说明请参考各模块的README文件。
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
+
+## 🤝 贡献
+
+欢迎提交Issue和Pull Request来帮助改进项目！
+
+## 📞 联系方式
+
+如有问题或建议，请通过以下方式联系：
+- 提交Issue：[GitHub Issues](https://github.com/your-username/ai-psychology-chat/issues)
+- 邮箱：developer@ai-psychology.com
+
+---
+
+⭐ 如果这个项目对您有帮助，请给它一个星标！
